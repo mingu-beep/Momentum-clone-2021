@@ -61,9 +61,25 @@ function loadToDos() {
   }
 }
 
-function init() {
+function handleShowing(event) {
+  toDoForm.classList.remove("noshowing");
+  toDoList.classList.remove("noshowing");
+  console.log("Reload");
+  location.reload();
   loadToDos();
-  toDoForm.addEventListener("submit", handleSubmit);
+}
+
+function init() {
+  const userInfo = localStorage.getItem("currentUser");
+  if (userInfo === null) {
+    const nameInput = document.querySelector(".js-form");
+    nameInput.addEventListener("submit", handleShowing);
+  } else {
+    toDoForm.classList.remove("noshowing");
+    toDoList.classList.remove("noshowing");
+    loadToDos();
+    toDoForm.addEventListener("submit", handleSubmit);
+  }
 }
 
 init();
