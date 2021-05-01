@@ -11,10 +11,22 @@ li {
 
 input {
   border: none;
-  background-color: transparent;
-  padding: 10px 5px;
+  padding: 20px 30px;
+  font-size: 20px;
   border-bottom: 2px solid white;
+  background-color: whitesmoke;
+  width: 400px;
+  border-radius: 40px;
   outline-style: none;
+  position: relative;
+}
+input::placeholder {
+  color: slategrey;
+}
+
+.inputToDo {
+  position: relative;
+  top: -100px;
 }
 
 .background-opa {
@@ -38,7 +50,7 @@ input {
 }
 .js-clock {
   color: whitesmoke;
-  font-size: 50px;
+  font-size: 70px;
 }
 .form,
 .greetings {
@@ -70,4 +82,34 @@ input {
   height: 100%;
   z-index: -2;
   animation: fadeIn 1s linear;
+}
+
+.js-greetings {
+  color: whitesmoke;
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  top: -100px;
+}
+
+.js-toDoList {
+  position: relative;
+  top: -80px;
+}
+
+li {
+  display: block;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  font-size: 25px;
+  background-color: black;
+  position: relative;
+  opacity: 0.5;
+  color: whitesmoke;
+}
+button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }
