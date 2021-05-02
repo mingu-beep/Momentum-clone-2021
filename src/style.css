@@ -138,3 +138,8 @@ button {
   left: 10px;
   color: ivory;
 }
+
+.welcome {
+  color: white;
+  font-size: 40px;
+}
