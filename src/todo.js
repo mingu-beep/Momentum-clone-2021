@@ -63,9 +63,6 @@ function loadToDos() {
 }
 
 function handleShowing(event) {
-  toDoForm.classList.remove("noshowing");
-  toDoList.classList.remove("noshowing");
-  console.log("Reload");
   location.reload();
   loadToDos();
 }
@@ -76,6 +73,10 @@ function init() {
     const nameInput = document.querySelector(".js-form");
     nameInput.addEventListener("submit", handleShowing);
   } else {
+    const welcome = document.querySelector(".welcome");
+    const clock = document.querySelector(".js-clock");
+    welcome.classList.add("noshowing");
+    clock.classList.add("showing");
     toDoForm.classList.remove("noshowing");
     toDoList.classList.remove("noshowing");
     loadToDos();
